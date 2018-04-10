@@ -11,6 +11,8 @@ const Root = styled.div`
   height: 5rem;
   margin: 0.5rem;
   cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 3px;
   :hover {
     background-color: red;
   }

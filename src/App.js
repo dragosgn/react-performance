@@ -20,7 +20,9 @@ class App extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {}
+  handleClick(e) {
+    console.log(e);
+  }
 
   render() {
     return (
