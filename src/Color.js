@@ -21,9 +21,8 @@ const Root = styled.button`
 export default ({ display, color, handleClick }) => (
   <Root
     onClick={handleClick}
-    color={color}
-    value={color}
-    style={{ backgroundColor: `${color}` }}
+    value={color.color}
+    style={{ backgroundColor: `${color.color}` }}
   >
     {display}
   </Root>

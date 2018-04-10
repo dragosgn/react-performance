@@ -24,12 +24,16 @@ class App extends Component {
   }
 
   handleClick(e: Event) {
-    console.log(e.target.value);
     let colorList = this.state.colorList;
-    var index = colorList.indexOf(e.target.value);
+    let found = colorList.find(c => {
+      return c.color === e.target.value;
+    });
+    let index = colorList.indexOf(found);
+
     if (index > -1) {
       colorList.splice(index, 1);
     }
+
     this.setState({
       colorList
     });
@@ -47,7 +51,7 @@ class App extends Component {
                 <Color
                   key={key}
                   display={key.toFixed(2)}
-                  color={color.color}
+                  color={color}
                   handleClick={this.handleClick}
                 />
               );
