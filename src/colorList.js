@@ -1,4 +1,4 @@
-let a = 1000;
+let a = 10000;
 let colors = [];
 let i;
 
