@@ -41,13 +41,13 @@ class MathRandomPicker extends Component {
   render() {
     return (
       <Root>
-        <p>Using the index</p>
+        <p>Using id </p>
         <ColorBox>
           {this.state.colorList &&
             this.state.colorList.map((color, index) => {
               return (
                 <Color
-                  key={index}
+                  key={color.id}
                   display={index}
                   color={color}
                   handleClick={this.handleClick}

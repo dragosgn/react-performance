@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import "./App.css";
 import Color from "./Color";
 import colorList from "./colorList";
 import Math from "./MathRandomPicker";
+import Index from "./IndexPicker";
+import Id from "./IdPicker";
 
 const Root = styled.div`
   padding: 0.5rem;
@@ -17,6 +18,8 @@ class App extends Component {
     return (
       <Root>
         <Math />
+        <Index />
+        <Id />
       </Root>
     );
   }
