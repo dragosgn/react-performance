@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Root = styled.div`
-  background-color: ${props => props.color};
+const Root = styled.button`
   color: white;
   display: flex;
   align-items: center;
@@ -12,19 +11,20 @@ const Root = styled.div`
   margin: 0.5rem;
   cursor: pointer;
   border: 1px solid grey;
+  font-size: 1.3rem;
   border-radius: 3px;
   :hover {
     background-color: red;
   }
 `;
 
-const Id = styled.p`
-  font-size: 1.3rem;
-  font-weight: 400;
-`;
-
 export default ({ display, color, handleClick }) => (
-  <Root onClick={handleClick} color={color} value={display}>
-    <Id>{display}</Id>
+  <Root
+    onClick={handleClick}
+    color={color}
+    value={color}
+    style={{ backgroundColor: `${color}` }}
+  >
+    {display}
   </Root>
 );

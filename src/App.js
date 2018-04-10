@@ -18,10 +18,21 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      colorList
+    };
   }
 
   handleClick(e: Event) {
-    console.log(e.target);
+    console.log(e.target.value);
+    let colorList = this.state.colorList;
+    var index = colorList.indexOf(e.target.value);
+    if (index > -1) {
+      colorList.splice(index, 1);
+    }
+    this.setState({
+      colorList
+    });
   }
 
   render() {
@@ -29,15 +40,14 @@ class App extends Component {
       <Root>
         <p>Perfomance comparison in react</p>
         <ColorBox>
-          {console.log(colorList)}
-          {colorList &&
-            colorList.map(color => {
+          {this.state.colorList &&
+            this.state.colorList.map((color, index) => {
               const key = Math.random();
               return (
                 <Color
                   key={key}
                   display={key.toFixed(2)}
-                  color={color}
+                  color={color.color}
                   handleClick={this.handleClick}
                 />
               );
