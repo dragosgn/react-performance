@@ -20,8 +20,8 @@ class App extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e) {
-    console.log(e);
+  handleClick(e: Event) {
+    console.log(e.target);
   }
 
   render() {

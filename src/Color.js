@@ -24,7 +24,7 @@ const Id = styled.p`
 `;
 
 export default ({ display, color, handleClick }) => (
-  <Root onClick={handleClick} color={color}>
+  <Root onClick={handleClick} color={color} value={display}>
     <Id>{display}</Id>
   </Root>
 );
