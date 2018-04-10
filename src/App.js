@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import Color from "./Color";
-import colorList from "./colorList";
 import Math from "./MathRandomPicker";
 import Index from "./IndexPicker";
 import Id from "./IdPicker";
