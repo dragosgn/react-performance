@@ -45,11 +45,10 @@ class MathRandomPicker extends Component {
         <ColorBox>
           {this.state.colorList &&
             this.state.colorList.map((color, index) => {
-              const key = Math.random();
               return (
                 <Color
-                  key={key}
-                  display={key.toFixed(2)}
+                  key={index}
+                  display={index}
                   color={color}
                   handleClick={this.handleClick}
                 />
