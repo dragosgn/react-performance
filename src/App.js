@@ -9,13 +9,14 @@ import Math from "./MathRandomPicker";
 const Root = styled.div`
   padding: 0.5rem;
   display: flex;
+  flex-grow: 1;
 `;
 
 class App extends Component {
   render() {
     return (
       <Root>
-        <MathRandomPicker />
+        <Math />
       </Root>
     );
   }
